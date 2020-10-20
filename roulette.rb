@@ -53,7 +53,8 @@ column_3_count = 0
 first_12 = 0
 second_12 = 0
 third_12 = 0
-
+is_odd = 0
+is_even = 0
 
 spins.times do 
   rand_num = rand(0..37)
@@ -81,6 +82,12 @@ p "#{rand_num}  #{double[rand_num]["color"]}"
     third_12 += 1
   end
 
+  if rand_num.odd?
+    is_odd += 1
+  else
+    is_even +=1
+  end
+
 end
 p "___RED OR BLACK___"
 p "Out of #{spins} spins #{red_count} of them were red."
@@ -93,4 +100,6 @@ p "___The 12's___"
 p "Out of #{spins} spins #{first_12} of them were in First 12."
 p "Out of #{spins} spins #{second_12} of them were in Second 12."
 p "Out of #{spins} spins #{third_12} of them were in Third 12."
-
+p "___EVEN OR ODD___"
+p "Out of #{spins} spins #{is_even} of them were even."
+p "Out of #{spins} spins #{is_odd} of them were odd."

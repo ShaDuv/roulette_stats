@@ -55,6 +55,8 @@ second_12 = 0
 third_12 = 0
 is_odd = 0
 is_even = 0
+lower_half = 0
+upper_half = 0
 
 spins.times do 
   rand_num = rand(0..37)
@@ -86,6 +88,12 @@ p "#{rand_num}  #{double[rand_num]["color"]}"
     is_odd += 1
   else
     is_even +=1
+  end
+
+  if rand_num >= 1 && rand_num <= 18
+    lower_half += 1
+  else
+    upper_half += 1
   end
 
 end
